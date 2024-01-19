@@ -51,11 +51,11 @@ return {
           require("plugins.tree")
         end,
     },
-    {
-        "gvlatko/inline-relative-numbers.nvim",
-        config = function() require("inline-relative-numbers").setup {} end,
-        event = "BufRead",
-    },
+    -- {
+    --     "gvlatko/inline-relative-numbers.nvim",
+    --     config = function() require("inline-relative-numbers").setup {} end,
+    --     event = "BufRead",
+    -- },
     {
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
@@ -69,4 +69,32 @@ return {
         end
 
     },
+    -- LSP
+    {
+        "neovim/nvim-lspconfig"
+    },
+    {
+        "williamboman/mason.nvim"
+    },
+    {
+        "williamboman/mason-lspconfig.nvim",
+    },
+    {
+        "hrsh7th/nvim-cmp"
+    },
+    {
+        "hrsh7th/cmp-nvim-lsp"
+    },
+    {
+        "jose-elias-alvarez/null-ls.nvim",
+        config = function()
+          require("plugins.null-ls")
+        end
+    },
+    {
+        "MunifTanjim/prettier.nvim",
+        config = function()
+          require("plugins.prettier")
+        end
+    }
 }
