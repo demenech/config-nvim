@@ -1,5 +1,26 @@
 return {
 	"nyoom-engineering/oxocarbon.nvim",
+    {
+      'stevearc/dressing.nvim',
+      opts = {},
+    },
+    {
+        "christoomey/vim-tmux-navigator",
+        cmd = {
+            "TmuxNavigateLeft",
+            "TmuxNavigateDown",
+            "TmuxNavigateUp",
+            "TmuxNavigateRight",
+            "TmuxNavigatePrevious",
+        },
+        keys = {
+            { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+            { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+            { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+            { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+            { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+        },
+    },
 	{
 		'windwp/nvim-autopairs',
 	  	event = "InsertEnter",
@@ -51,11 +72,11 @@ return {
           require("plugins.tree")
         end,
     },
-    -- {
-    --     "gvlatko/inline-relative-numbers.nvim",
-    --     config = function() require("inline-relative-numbers").setup {} end,
-    --     event = "BufRead",
-    -- },
+    {
+        "gvlatko/inline-relative-numbers.nvim",
+        config = function() require("inline-relative-numbers").setup {} end,
+        event = "BufRead",
+    },
     {
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
