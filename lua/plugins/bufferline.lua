@@ -2,7 +2,7 @@ local bufferline = require("bufferline")
 
 bufferline.setup({
   options = {
-    mode = "tabs",
+    --  mode = "tabs",
     show_buffer_close_icons = false,
     separator_style = { "|", "|" },
     always_show_bufferline = true,
