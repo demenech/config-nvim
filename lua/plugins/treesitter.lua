@@ -6,7 +6,8 @@ require 'nvim-treesitter.configs'.setup {
     "html",
     "css",
     "gitcommit",
-    "json"
+    "json",
+    "lua"
   },
   sync_install = false,
   highlight = {
